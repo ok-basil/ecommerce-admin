@@ -6,18 +6,13 @@ export default function Home() {
     return (
       <div className="bg-black w-screen h-screen flex items-center">
         <div className="text-center w-full">
-          <button className="bg-white p-2 px-4 rounded-lg">Login with Google</button>
+          <button onClick={() => signIn()} className="bg-white p-2 px-4 rounded-lg">Login with Google</button>
         </div>
       </div>
     );
   }
-  else {
-    return (
-      <div className="bg-black w-screen h-screen flex items-center">
-        <div className="text-center w-full">
-          <button className="bg-white p-2 px-4 rounded-lg">Login with Google</button>
-        </div>
-      </div>
-    );
-  }
+
+  return (
+    <div>Logged in as {session.user.email}</div>
+  )
 }
