@@ -1,1 +1,1 @@
-This is a e-commerce website built using next.js
+This is a e-commerce admin dashboard built using Next.js
