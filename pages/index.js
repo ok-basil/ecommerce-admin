@@ -14,9 +14,9 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-blue-900 min-h-screen">
+    <div className="bg-blue-900 min-h-screen flex">
       <Nav />
-      <div>Logged in as {session.user.email}</div>
+      <div className="bg-white flex-grow mt-1 mr-1 mb-2 rounded-lg p-4">Logged in as {session.user.email}</div>
     </div>
     
   )
