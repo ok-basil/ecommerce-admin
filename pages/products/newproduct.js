@@ -19,7 +19,7 @@ function NewProduct() {
                     type="text" 
                     placeholder="Product Name"
                     value={name}
-                    onChange={event => setTitle(event.target.value)} />
+                    onChange={event => setName(event.target.value)} />
                 <label>Description</label>
                 <textarea 
                     placeholder="Description"
