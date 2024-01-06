@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 function NewProduct() {
     return (
         <Layout>
-            New Product
+            <input type="text" placeholder="Product Name" />
         </Layout>
     )
 }
