@@ -1,8 +1,11 @@
 import Layout from "@/components/Layout";
+import Link from "next/link";
 
 function Products() {
     return (
-        <Layout>Products page here</Layout>
+        <Layout>
+            <Link href={'/products/new'}>Add new product</Link>
+        </Layout>
     );
 }
 
