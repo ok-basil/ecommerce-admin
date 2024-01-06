@@ -2,20 +2,36 @@ import Layout from "@/components/Layout";
 import { useState } from "react";
 
 function NewProduct() {
-    const [title, setTitle] = useState('');
+    const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
-    
+
+    function createProduct(){
+
+    }
     return (
         <Layout>
-            <h1>New Product</h1>
-            <label>Product Name</label>
-            <input type="text" placeholder="Product Name" />
-            <label>Description</label>
-            <textarea placeholder="Description"></textarea>
-            <label>Price (in USD)</label>
-            <input type="number" placeholder="Price" />
-            <button className="btn-primary">Save</button>
+            <form onSubmit={createProduct}>
+                <h1>New Product</h1>
+                <label>Product Name</label>
+                <input 
+                    type="text" 
+                    placeholder="Product Name"
+                    value={name}
+                    onChange={event => setTitle(event.target.value)} />
+                <label>Description</label>
+                <textarea 
+                    placeholder="Description"
+                    value={description}
+                    onChange={event => setDescription(event.target.value)}/>
+                <label>Price (in USD)</label>
+                <input 
+                    type="number" 
+                    placeholder="Price"
+                    value={price}
+                    onChange={event => setPrice(event.target.value)} />
+                <button type="submit" className="btn-primary">Save</button>
+            </form>        
         </Layout>
     )
 }
