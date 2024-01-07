@@ -14,7 +14,7 @@ function NewProduct() {
         <Layout>
             <form onSubmit={createProduct}>
                 <h1>New Product</h1>
-                <label>Product Name</label>
+                <label>Product name</label>
                 <input 
                     type="text" 
                     placeholder="Product Name"
