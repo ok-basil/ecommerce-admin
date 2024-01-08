@@ -1,3 +1,9 @@
+import mongoose from "mongoose";
+
 export default function handler(req, res) {
-    res.json(req.method);
+    const {method} = req;
+    mongoose.connect()
+    if (method === 'POST') {
+
+    }
 }
