@@ -31,7 +31,7 @@ function NewProduct() {
                     placeholder="Price"
                     value={price}
                     onChange={event => setPrice(event.target.value)} />
-                <button type="submit" className="btn-primary">Save</button>
+                <button type="submit" className="btn-primary">SAVE</button>
             </form>        
         </Layout>
     )
