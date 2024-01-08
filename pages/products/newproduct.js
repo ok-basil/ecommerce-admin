@@ -14,7 +14,7 @@ function NewProduct() {
         <Layout>
             <form onSubmit={createProduct}>
                 <h1>New Product</h1>
-                <label>Product name</label>
+                <label>Product Name</label>
                 <input 
                     type="text" 
                     placeholder="Product Name"
@@ -31,7 +31,7 @@ function NewProduct() {
                     placeholder="Price"
                     value={price}
                     onChange={event => setPrice(event.target.value)} />
-                <button type="submit" className="btn-primary">SAVE</button>
+                <button type="submit" className="btn-primary">Save</button>
             </form>        
         </Layout>
     )
