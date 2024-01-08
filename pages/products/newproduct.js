@@ -7,6 +7,7 @@ function NewProduct() {
     const [price, setPrice] = useState('');
 
     async function createProduct(){
+        ev.preventDefault();
         const data = {title, description, price};
         await axios.post('/api/products', data);
     }
@@ -19,18 +20,18 @@ function NewProduct() {
                     type="text" 
                     placeholder="Product Name"
                     value={name}
-                    onChange={event => setName(event.target.value)} />
+                    onChange={ev => setName(ev.target.value)} />
                 <label>Description</label>
                 <textarea 
                     placeholder="Description"
                     value={description}
-                    onChange={event => setDescription(event.target.value)}/>
+                    onChange={ev => setDescription(ev.target.value)}/>
                 <label>Price (in USD)</label>
                 <input 
                     type="number" 
                     placeholder="Price"
                     value={price}
-                    onChange={event => setPrice(event.target.value)} />
+                    onChange={ev => setPrice(ev.target.value)} />
                 <button type="submit" className="btn-primary">Save</button>
             </form>        
         </Layout>
