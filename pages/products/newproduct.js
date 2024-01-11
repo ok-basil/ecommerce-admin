@@ -3,13 +3,13 @@ import { useState } from "react";
 import axios from "axios";
 
 function NewProduct() {
-    const [name, setName] = useState('');
+    const [title, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
 
     async function createProduct(ev){
         ev.preventDefault();
-        const data = {name, description, price};
+        const data = {title, description, price};
         await axios.post('/api/products', data);
     }
     return (
@@ -20,7 +20,7 @@ function NewProduct() {
                 <input 
                     type="text" 
                     placeholder="Product Name"
-                    value={name}
+                    value={title}
                     onChange={ev => setName(ev.target.value)} />
                 <label>Description</label>
                 <textarea 

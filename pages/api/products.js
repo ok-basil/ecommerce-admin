@@ -1,14 +1,14 @@
-import {mongooseConnect} from "@/lib/mongoose";
-import { Product } from "@/models/Product";
 import mongoose from "mongoose";
+import {Product} from "@/models/Product";
+import {mongooseConnect} from "@/lib/mongoose";
 
-export default async function handler(req, res) {
+export default async function handle(req, res) {
     const {method} = req;
     await mongooseConnect();
     if (method === 'POST') {
         const {title, description, price} = req.body;
         const productDoc = await Product.create({
-            title, description, price,
+            title,description,price,
         })
         res.json(productDoc);
     }
