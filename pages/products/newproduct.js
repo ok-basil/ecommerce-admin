@@ -1,12 +1,14 @@
 import Layout from "@/components/Layout";
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 
-function NewProduct() {
+export default function NewProduct() {
     const [title, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
     const [goToProducts, setGoToProducts] = useState(false);
+    const router = useRouter();
 
     async function createProduct(ev){
         ev.preventDefault();
@@ -15,7 +17,7 @@ function NewProduct() {
         setGoToProducts(true);
     }
     if (goToProducts) {
-        return redirect('/products');
+        router.push('/products');
     }
     return (
         <Layout>
@@ -43,5 +45,3 @@ function NewProduct() {
         </Layout>
     )
 }
-
-export default NewProduct;
