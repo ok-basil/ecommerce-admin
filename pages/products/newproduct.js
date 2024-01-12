@@ -6,11 +6,16 @@ function NewProduct() {
     const [title, setName] = useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('');
+    const [goToProducts, setGoToProducts] = useState(false);
 
     async function createProduct(ev){
         ev.preventDefault();
         const data = {title, description, price};
         await axios.post('/api/products', data);
+        setGoToProducts(true);
+    }
+    if (goToProducts) {
+        return redirect('/products');
     }
     return (
         <Layout>
