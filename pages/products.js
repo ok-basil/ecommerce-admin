@@ -14,7 +14,7 @@ function Products() {
     return (
         <Layout>
             <Link href={'/products/newproduct'} className="bg-blue-900 text-white px-2 py-1 rounded-md">Add new product</Link>
-            <table className="basic">
+            <table className="basic mt-2">
                 <thead>
                     <tr>
                         <td>Product Name</td>
@@ -25,7 +25,11 @@ function Products() {
                     {products.map(product => (
                         <tr>
                             <td>{product.title}</td>
-                            <td></td>
+                            <td>
+                                <Link href={'/products/'+product._id}>
+                                    Edit
+                                </Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
