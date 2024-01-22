@@ -11,7 +11,7 @@ export default function EditProductPage() {
     }, [id])
     return (
         <Layout>
-            Edit product form here!
+            Edit product form here!!
         </Layout>
     )
 }
